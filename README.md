@@ -199,6 +199,11 @@ Make sure you have these installed:
 
 (More demo customers: priya@email.com, rahul@email.com, sneha@email.com — all use `pass123`)
 
+**Demo: Driver Login**
+Go to /driver-login and click any of the 3 demo drivers shown, or use:
+- Phone: 9111222333 · License: KA01-20234567 (Suresh Kumar)
+- Phone: 9555666777 · License: AP05-20238901 (Vijay Rao)
+
 ---
 
 ## 🔌 API Endpoints
