@@ -7,11 +7,11 @@ require('dotenv').config();
 const app    = express();
 const server = http.createServer(app);
 const io     = new Server(server, {
-  cors: { origin: process.env.CLIENT_URL || 'http://localhost:3000', methods: ['GET','POST','PUT','PATCH','DELETE'] }
+  cors: { origin: process.env.CLIENT_URL || 'http://ec2-65-2-187-91.ap-south-1.compute.amazonaws.com:3000', methods: ['GET','POST','PUT','PATCH','DELETE'] }
 });
 
 // ── Middleware ──────────────────────────────────────────
-app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:3000' }));
+app.use(cors({ origin: process.env.CLIENT_URL || 'http://ec2-65-2-187-91.ap-south-1.compute.amazonaws.com:3000' }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -44,6 +44,6 @@ require('./socket/socketHandler')(io);
 // ── Start ───────────────────────────────────────────────
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
-  console.log(`🚀  CabGo backend running at http://localhost:${PORT}`);
+  console.log(`🚀  CabGo backend running at http://ec2-65-2-187-91.ap-south-1.compute.amazonaws.com:${PORT}`);
   console.log(`📡  Socket.io ready`);
 });

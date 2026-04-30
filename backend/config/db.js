@@ -20,6 +20,7 @@ const pool = mysql.createPool({
     conn.release();
   } catch (err) {
     console.error('❌  MySQL connection failed:', err.message);
+    console.error('\u2192 Hint: ensure your DB credentials are set in backend/.env or environment variables (DB_HOST, DB_USER, DB_PASSWORD, DB_NAME).');
   }
 })();
 
